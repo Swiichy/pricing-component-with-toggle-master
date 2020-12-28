@@ -144,7 +144,8 @@ input:checked + .slider:before {
 }
 
 .content-midle-card {
-    background-color:#8D91EA !important;
+    background: rgb(109,113,223);
+    background: linear-gradient(0deg, rgba(109,113,223,1) 29%, rgba(159,162,239,1) 94%);
 }
 
 .title-card {
