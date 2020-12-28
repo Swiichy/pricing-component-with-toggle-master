@@ -1,0 +1,343 @@
+/*@FONT@*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/*@------BASES------@*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.container {
+    position: relative;
+    width: 1440px;
+    height: 850px;
+    background-color: hsl(240, 78%, 98%);
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: hsl(233, 13%, 49%);
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+/*@------HEADER------@*/
+
+.content-toggle-button {
+    display: flex;
+    align-items: center;
+}
+
+.content-toggle-switch {
+    padding: 0 2em;
+}
+
+.left-side-text-toggle,
+.right-side-text-toggle {
+    color: hsl(234, 14%, 74%);
+}
+
+/*@------SLIDER------@*/
+
+/* The switch -  the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    rotate: 180deg;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(120,124,210,1) 15%, rgba(150,157,235,1) 100%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:hover {
+    background: linear-gradient(90deg, rgba(120,124,210,0.5) 15%, rgba(150,157,235,0.5) 100%);
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #7B7FE1;
+}
+
+input:checked + .slider:hover {
+    background: linear-gradient(90deg, rgba(120,124,210,0.5) 15%, rgba(150,157,235,0.5) 100%);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+/*@------CARD------@*/
+
+.content-card-annually-monthly {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 200;
+}
+
+.content-midle-card {
+    background-color:#8D91EA !important;
+}
+
+.title-card {
+    color: hsl(233, 13%, 49%);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.title-card-white,
+.content-price-card-white {
+    color: white !important;
+}
+
+.content-price-card {
+    text-align: center;
+    font-size: 3.5em;
+    color: #4A4D60;
+    margin-bottom: 0.5em;
+}
+
+.content-body-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    color: hsl(233, 13%, 49%);
+    padding-bottom: 1em;
+}
+
+.content-body-card-white {
+    color: white !important;
+}
+
+.item-body-card {
+    width: 100%;
+    border-top: 1px solid hsl(234, 14%, 74%);
+    padding: 1em 0em
+}
+
+.item-body-card-white {
+    border-top: 1px solid #fff !important;
+}
+
+.last-item {
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.last-item-white {
+    border-bottom: 1px solid #fff !important;
+}
+
+.content-left-card,
+.content-right-card {
+    padding: 3em 2em;
+    margin: 0;
+    -webkit-box-shadow: -1px 10px 12px 0px rgba(196,188,196,1);
+    -moz-box-shadow: -1px 10px 12px 0px rgba(196,188,196,1);
+    box-shadow: -1px 10px 12px 0px rgba(196,188,196,1);
+}
+
+.content-midle-card {
+    position: relative;
+    padding: 3em 2em;
+    height: 390px;
+    -webkit-box-shadow: 1px 7px 7px 0px rgba(196,188,196,1);
+    -moz-box-shadow: 1px 7px 7px 0px rgba(196,188,196,1);
+    box-shadow: 1px 7px 7px 0px rgba(196,188,196,1);
+}
+
+
+.content-title-card-mid {
+    margin-top: 16px;
+}
+
+.content-footer-card {
+    padding-top: 0.5em;
+}
+
+.content-footer-card button {
+    width: 300px;
+    border: none;
+    padding: 1em 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(150,157,235,1) 15%, rgba(120,124,210,1) 100%);
+    border: 1px solid transparent;
+    transition: 200ms ease-in-out;
+}
+
+.content-footer-card button:hover {
+    background: transparent;
+    border: 1px solid #797DD3;
+    color: #797DD3;
+    transition: 200ms ease-in-out;
+}
+
+.content-footer-card-white button {
+    background: white !important;
+    color: #797DD3;
+}
+
+.content-footer-card-white button:hover {
+    background: transparent !important;
+    border: 1px solid #fff !important;
+    color: #fff;
+    transition: 200ms ease-in-out;
+}
+
+.content-left-card {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.content-right-card {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.bg-bottom svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.bg-top svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.test {
+    font-size: 0.7em;
+    padding-right: 0.3em;
+}
+
+.content-price-card {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: hidden;
+    }
+    .content-card-annually-monthly {
+        flex-direction: column;
+        margin-top: 5em;
+        margin-bottom: 4em;
+    }
+
+    .content-card {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 2em;
+        border-radius: 15px;
+        padding: 2em 2.5em;
+    }
+
+    .content-title-header {
+        padding-top: 4em;
+    }
+
+    .content-toggle-switch {
+        padding: 0 1em;
+    }
+
+    .content-footer-card button,
+    .content-body-card  {
+        max-width: 252px;
+    }
+
+    .mobile-margin-card {
+        margin-bottom: 0;
+    }
+
+    .bg-top svg {
+        top: -50px;
+        right: -190px;
+        z-index: 0;
+    }
+
+    .bg-bottom svg {
+        display: none;
+    }
+}
